@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/signup/static/css/main.e1d1b14e.chunk.css",
+    "main.js": "/signup/static/js/main.c622e000.chunk.js",
+    "main.js.map": "/signup/static/js/main.c622e000.chunk.js.map",
+    "runtime-main.js": "/signup/static/js/runtime-main.67a76ee3.js",
+    "runtime-main.js.map": "/signup/static/js/runtime-main.67a76ee3.js.map",
+    "static/js/2.f0058fb5.chunk.js": "/signup/static/js/2.f0058fb5.chunk.js",
+    "static/js/2.f0058fb5.chunk.js.map": "/signup/static/js/2.f0058fb5.chunk.js.map",
+    "static/js/3.46a0768a.chunk.js": "/signup/static/js/3.46a0768a.chunk.js",
+    "static/js/3.46a0768a.chunk.js.map": "/signup/static/js/3.46a0768a.chunk.js.map",
+    "index.html": "/signup/index.html",
+    "static/css/main.e1d1b14e.chunk.css.map": "/signup/static/css/main.e1d1b14e.chunk.css.map",
+    "static/js/2.f0058fb5.chunk.js.LICENSE.txt": "/signup/static/js/2.f0058fb5.chunk.js.LICENSE.txt",
+    "static/media/SignUp.css": "/signup/static/media/circle1.eb619c1c.svg",
+    "static/media/facebook.f4929eff.svg": "/signup/static/media/facebook.f4929eff.svg",
+    "static/media/google.14c0d49c.svg": "/signup/static/media/google.14c0d49c.svg",
+    "static/media/logo.6ce24c58.svg": "/signup/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.67a76ee3.js",
+    "static/js/2.f0058fb5.chunk.js",
+    "static/css/main.e1d1b14e.chunk.css",
+    "static/js/main.c622e000.chunk.js"
+  ]
+}
