@@ -53,8 +53,8 @@
   border-radius: 12px;
 }
 .SignUp__success {
-  width: 278px;
-  height: 56px;
+  /* width: 278px; */
+  /* height: 56px; */
   margin-left: 20px;
   margin-top: 344px;
 
@@ -219,7 +219,7 @@ span.alt {
   line-height: 0.1em;
 }
 .SignUp__some {
-  width: 80%;
+  width: 300px;
   /* margin: 0.7em auto;*/
   overflow: hidden;
   margin-top: 84px;
@@ -281,5 +281,50 @@ span.alt {
   }
   .SignUp__success {
     margin-top: 50%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .SignUp__text {
+    margin-left: 30px !important;
+    font-size: 30px;
+    margin-top: 256px;
+  }
+  .SignUp__r2 {
+    margin-left: 30px !important;
+  }
+  .SignUp__picture {
+    height: 200px;
+    width: 200px;
+  }
+  .SignUp__section {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .SignUp__em {
+    width: 300px;
+  }
+  .SignUp__nam {
+    width: 300px;
+    margin-top: 182px;
+  }
+  .SignUp__pass {
+    width: 300px;
+  }
+  .SignUp__next {
+    width: 300px;
+  }
+  .SignUp__some {
+    width: 300px;
+  }
+  .SignUp__success {
+    font-size: 20px;
+    margin-top: 344px;
+    margin-left: 40px;
+  }
+  .SignUp__button {
+    width: 300px;
+  }
+  .SignUp__verify {
+    margin-top: 182px;
   }
 }

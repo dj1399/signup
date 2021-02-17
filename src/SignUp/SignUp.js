@@ -49,26 +49,26 @@ export default class SignUp extends React.Component{
                  this.state.mainDiv && <div className="SignUp__main">
                      <div className="SignUp__back">
                 <div className="row ">
-                    <div className="col-md-8">
+                    <div className="SignUp__section col-md-7">
                         <div className="SignUp__text">
                         Sign Up to <br/> View Your Profile Direct
                         </div>
                         <div className="SignUp__r2 row">
                         {/* <div className="col-md-2" > */}
-                            <div className="SignUp__signup">
+                            <div className=" SignUp__signup">
                         if you don’t have an account<br/> logged in ever,  <a className="SignUp__link" href="#">Signup here!</a>
                         {/* </div> */}
                         </div>
                         {/* <div className="col-md-2 mr-2"> */}
                             {/* <div className="picture" ></div> */}
-                            <img src={pic} className="SignUp__picture"></img>
+                            <img src={pic} className=" SignUp__picture"></img>
                         {/* </div>
                          */}
                         
                         
                     </div>
                     </div>
-                    <div className="col-md-4 ">
+                    <div className="SignUp__section col-md-5 ">
                     <div className="SignUp_Form row">
                     <form>
                     <div class="form-group">
@@ -121,12 +121,12 @@ export default class SignUp extends React.Component{
                             {/* <button onClick={this.handleClickNext}> next</button> */}
                             <div className="SignUp__back">
                 <div className="row ">
-                    <div className="col-md-8">
+                    <div className="SignUp__section col-md-7">
                         <div className="SignUp__text" style={{marginBottom:"20px"}}>
                         Verify Urself to<br/>Activate Your Profile Account
                         </div>
                         <div className="SignUp__r2 row">
-                        <div className="col-md-4" >
+                        <div className="SignUp__section col-md-4" >
                             <div className="SignUp__signup">
                         if you don’t have an account<br/> logged in ever,  <a className="SignUp__link" href="#">Signup here!</a>
                         </div>
@@ -136,7 +136,7 @@ export default class SignUp extends React.Component{
                         </div>
                         </div>
                     </div>
-                    <div className="col-md-4 ">
+                    <div className="col-md-5 ">
                     <div className="row">
                         <div className="SignUp__verify" style={{marginLeft:"20px"}}>Verification Code</div>
                     <form>
@@ -169,6 +169,7 @@ export default class SignUp extends React.Component{
                   <button className="SignUp__google" ><img src={google}></img></button>
                   <button className="SignUp__facebook"><img src={facebook}></img></button>
                   </div>
+                  {/* </form> */}
                   </div>
                   </div>
                 {/* </div> */}
@@ -182,7 +183,7 @@ export default class SignUp extends React.Component{
                             {/* <button onClick={this.handleClickNext}> next</button> */}
                             <div className="SignUp__back">
                 <div className="row ">
-                    <div className="col-md-8">
+                    <div className="SignUp__section col-md-7">
                         <div className="SignUp__text">
                         Sign Up to<br/>View Your Profile Direct
                         </div>
@@ -197,7 +198,7 @@ export default class SignUp extends React.Component{
                         </div>
                     </div>
                     </div>
-                    <div className="col-md-4 ">
+                    <div className="SignUp__section col-md-5 ">
                     <div className="row">
                         <div className="SignUp__success">You have successfully <br/> sign up !</div>
                     
