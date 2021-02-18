@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/signup/static/css/main.85205173.chunk.css",
-    "main.js": "/signup/static/js/main.71b98c94.chunk.js",
-    "main.js.map": "/signup/static/js/main.71b98c94.chunk.js.map",
+    "main.css": "/signup/static/css/main.02b05623.chunk.css",
+    "main.js": "/signup/static/js/main.d5aab7db.chunk.js",
+    "main.js.map": "/signup/static/js/main.d5aab7db.chunk.js.map",
     "runtime-main.js": "/signup/static/js/runtime-main.f358b096.js",
     "runtime-main.js.map": "/signup/static/js/runtime-main.f358b096.js.map",
     "static/js/2.875fdacb.chunk.js": "/signup/static/js/2.875fdacb.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.7d97a44c.chunk.js": "/signup/static/js/3.7d97a44c.chunk.js",
     "static/js/3.7d97a44c.chunk.js.map": "/signup/static/js/3.7d97a44c.chunk.js.map",
     "index.html": "/signup/index.html",
-    "static/css/main.85205173.chunk.css.map": "/signup/static/css/main.85205173.chunk.css.map",
+    "static/css/main.02b05623.chunk.css.map": "/signup/static/css/main.02b05623.chunk.css.map",
     "static/js/2.875fdacb.chunk.js.LICENSE.txt": "/signup/static/js/2.875fdacb.chunk.js.LICENSE.txt",
     "static/media/SignUp.css": "/signup/static/media/circle1.eb619c1c.svg",
     "static/media/facebook.f4929eff.svg": "/signup/static/media/facebook.f4929eff.svg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.f358b096.js",
     "static/js/2.875fdacb.chunk.js",
-    "static/css/main.85205173.chunk.css",
-    "static/js/main.71b98c94.chunk.js"
+    "static/css/main.02b05623.chunk.css",
+    "static/js/main.d5aab7db.chunk.js"
   ]
 }
