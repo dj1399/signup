@@ -134,7 +134,7 @@ span.alt {
   line-height: 0.1em;
 }
 .SignIn__some {
-  width: 80%;
+  width: 333px;
   /* margin: 0.7em auto;*/
   overflow: hidden;
   margin-top: 84px;
@@ -155,6 +155,7 @@ span.alt {
   text-align: center;
   margin-right: 100px;
   margin-top: 75px;
+  width: 333px;
 }
 
 .SignIn__r2 {
@@ -176,5 +177,42 @@ span.alt {
   }
   .SignIn__em {
     margin-top: 20%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .SignIn__text {
+    margin-left: 30px !important;
+    font-size: 30px;
+    margin-top: 256px;
+  }
+  .SignIn__r2 {
+    padding-left: 30px !important;
+  }
+  .SignIn__picture {
+    height: 200px;
+    width: 200px;
+  }
+  .SignIn__section {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .SignIn__em {
+    width: 300px;
+    margin-top: 182px;
+  }
+
+  .SignIn__pass {
+    width: 300px;
+  }
+  .SignIn__next {
+    width: 300px;
+  }
+  .SignIn__some {
+    width: 300px;
+  }
+
+  .SignIn__button {
+    width: 300px;
   }
 }

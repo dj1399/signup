@@ -5,7 +5,7 @@ class homepage extends React.Component {
   render() {
     return (
       <div>
-        <Link to="/SignUp" >
+        <Link to="/Register" >
          Sign Up
         </Link>
         <br></br>

@@ -12,7 +12,10 @@ export default class SignUp extends React.Component{
              verificationDiv:false,
              successDiv:false,
              white:true,
-             
+             bgColor1:"rgba(243, 239, 239, 0.5)",
+             bgColor2:"rgba(243, 239, 239, 0.5)",
+             color1:"black",
+             color2:"black",
          }}
          handleClickNext = (event) =>
          {
@@ -32,17 +35,27 @@ export default class SignUp extends React.Component{
                     successDiv:true
                 })
          }
-         changeColor(){
-            this.setState({white: !this.state.white})
-        }
-        changeColorFem()
-        {
-            this.setState({white: !this.state.white})
-        }
+         changeColor1= (event) =>
+         {event.preventDefault()
+           this.setState({
+            bgColor1:"white",
+            bgColor2:"rgba(243, 239, 239, 0.5)",
+            color1:"yellow",
+            color2:"black",
+           })
+    }
+        changeColor2= (event) =>
+        {event.preventDefault()
+          this.setState({
+           bgColor1:"rgba(243, 239, 239, 0.5)",
+           bgColor2:"white",
+           color1:"black",
+           color2:"yellow",
+          })
+   }
     render()
     {
-        let btn_class = this.state.white ? "SignUp__gender" : "SignUp__gender_clicked";
-        let btn1_class = this.state.white ? "SignUp__gender" : "SignUp__gender_clicked" ;
+        
         return(<div className="SignUp">
                  {
                    
@@ -86,11 +99,11 @@ export default class SignUp extends React.Component{
                   <div className="row">
                 
                   <div class="col ">
-                   <button type="button" className={btn_class}  onClick={this.changeColor.bind(this)}>Male</button>
+                   <button type="button" className="SignUp__gender"  onClick={this.changeColor1} style={{background:this.state.bgColor1,color:this.state.color1}}>Male</button>
                    </div>
                    
                    <div class="col ">
-                   <button type="button" className={btn1_class}  onClick={this.changeColorFem.bind(this)}>Female</button>
+                   <button type="button" className="SignUp__gender"  onClick={this.changeColor2} style={{backgroundColor:this.state.bgColor2,color:this.state.color2}}>Female</button>
                   </div>
                   </div>
                   

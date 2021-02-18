@@ -41,17 +41,17 @@
   border-radius: 12px;
   border-color: transparent;
 }
-.SignUp__gender_clicked {
+/* .SignUp__gender_clicked {
   width: 83px;
   height: 49px;
   margin-top: 28px;
   background: #ffffff;
   color: yellow;
   backdrop-filter: blur(304px);
-  /* Note: backdrop-filter has minimal browser support */
-  /* border-color: rgba(243, 239, 239, 0.5); */
+  Note: backdrop-filter has minimal browser support 
+  border-color: rgba(243, 239, 239, 0.5);
   border-radius: 12px;
-}
+} */
 .SignUp__success {
   /* width: 278px; */
   /* height: 56px; */
@@ -219,7 +219,7 @@ span.alt {
   line-height: 0.1em;
 }
 .SignUp__some {
-  width: 300px;
+  width: 333px;
   /* margin: 0.7em auto;*/
   overflow: hidden;
   margin-top: 84px;
@@ -326,5 +326,12 @@ span.alt {
   }
   .SignUp__verify {
     margin-top: 182px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .SignUp__verify {
+    width: 100%;
+    margin-right: 50% !important;
   }
 }
