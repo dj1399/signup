@@ -145,7 +145,7 @@ export default class SignUp extends React.Component{
                         </div>
                         </div>
                         <div className="col-md-4">
-                            <div className="SignUp__picture" ></div>
+                        <img src={pic} className=" SignUp__picture"></img>
                         </div>
                         </div>
                     </div>
@@ -207,7 +207,7 @@ export default class SignUp extends React.Component{
                         </div>
                         </div>
                         <div className="col-md-4">
-                            <div className="SignUp__picture" ></div>
+                        <img src={pic} className=" SignUp__picture"></img>
                         </div>
                     </div>
                     </div>
