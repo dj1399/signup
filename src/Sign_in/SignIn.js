@@ -12,19 +12,21 @@ export default class SignIn extends React.Component
                 <div className="SignIn__back">
                 <div className="row ">
                     <div className="SignIn__section col-md-7">
+                        <div className="SignIn__left">
                         <div className="SignIn__text">
                         Sign In to <br/> View Your Profile Direct
                         </div>
                         <div className="SignIn__r2 row">
-                        {/* <div className="col-md-4" > */}
+                        {/* <div className="col" > */}
                             <div className="SignIn__signup">
                         if you don’t have an account<br/> logged in ever,  <a className="SignIn__link" href="#">Signup here!</a>
                         {/* </div> */}
                         </div>
-                        {/* <div className="col-md-4"> */}
+                        {/* <div className="col"> */}
                             <img src={pic} className="SignIn__picture"></img>
-                        </div>
                         {/* </div> */}
+                        </div>
+                        </div>
                     </div>
                     <div className="SignIn__section col-md-5 ">
                     <div className="SignIn_Form row">
