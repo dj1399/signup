@@ -3,6 +3,7 @@ import "./SignUp.css";
 import google from "../Images/google.svg";
 import facebook from "../Images/facebook.svg";
 import pic from "../Images/E-Commerce.svg";
+import {checkSignIn} from '../DataService/Signup';
 
 export default class SignUp extends React.Component{
     constructor (props) {
@@ -16,6 +17,11 @@ export default class SignUp extends React.Component{
              bgColor2:"rgba(243, 239, 239, 0.5)",
              color1:"black",
              color2:"black",
+             userEntry:"",
+             password:"",
+             confirmPassword:"",
+             isPwdSame:"",
+             role:"patient"
          }}
          handleClickNext = (event) =>
          {
@@ -53,6 +59,80 @@ export default class SignUp extends React.Component{
            color2:"yellow",
           })
    }
+
+   checkUserEntry(check){
+    var re = /\S+@\S+\.\S+/;
+    var phoneno = /^\d{10}$/;
+    let isEmail = re.test(check);
+    let isPhone = phoneno.test(check);
+    if(isEmail === true){
+        return "email";
+    }
+    else if(isPhone === true){
+        return "mob";
+    }
+    else{
+        return "error in email or mob no."
+    }
+}
+
+handleUserEntry = (e) =>{
+    this.setState({userEntry:e.target.value});
+}
+
+handleUserPassword = (e)=> {
+    this.setState({password:e.target.value});
+}
+
+handleConfirmPassword =(e)=>{
+    if(this.state.password === e.target.value){
+        this.setState({isPwdSame:true});
+    }
+    else{
+        this.setState({isPwdSame:false});
+    }
+
+    this.setState({confirmPassword:e.target.value});
+}
+
+
+handleSubmit = (e)=>{
+    e.preventDefault();   
+    let status = this.checkUserEntry(this.state.userEntry);
+    if (status === "email" || status === "mob") {
+        console.log("trigersedddddddddd")
+        var data = {};
+        if (status === "email") {
+            // data.append("email", this.state.userEntry);
+            data['email'] = this.state.userEntry;
+        }
+        else {
+           // data.append("contact", this.state.userEntry);
+            data['contact'] = this.state.userEntry;
+        }
+        //data.append("password", this.state.password);
+            data['password'] = this.state.password;
+            data['passwordConfirm']=this.state.confirmPassword;
+            data['role'] = this.state.role;
+        console.log(data);
+
+        checkSignIn(data)
+        .then((response)=>{
+            console.log(response)
+            if (response.data.status === "success") {
+                alert("account created");
+                console.log(response.data)
+            }
+        })
+        .catch((error)=>console.log(error));
+    }
+    else {
+        alert('wrong email or mobile number entered')
+    }
+}
+
+
+
     render()
     {
         
@@ -83,24 +163,33 @@ export default class SignUp extends React.Component{
                     </div>
                     <div className="SignUp__section col-md-5 ">
                                 <div className="SignUp_Form row">
-                                    <form>
+                                    <form onSubmit={this.handleSubmit}>
                                         <div class="form-group">
-                                            <input type="email" name="" id="" className="SignUp__em form-control" placeholder="Email/Phone number" aria-describedby="emailHelp" />
+                                            <input type="email" onChange={this.handleUserEntry} name="userEntry" id="userEntry" className="SignUp__em form-control"
+                                            placeholder="Email/Phone number" aria-describedby="emailHelp" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" name="" id="" class="SignUp__pass form-control" placeholder="Enter Password" id="exampleInputPassword1" />
+                                            <input type="password" onChange={this.handleUserPassword} name="password" id="password" class="SignUp__pass form-control" 
+                                             placeholder="Enter Password" autoComplete="off" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" name="" id="" class="SignUp__pass form-control" placeholder="Confirm Password" id="exampleInputPassword1" />
+                                            <input type="password" onChange={this.handleConfirmPassword} name="confirmPassword" id="confirmPassword" class="SignUp__pass form-control" 
+                                            placeholder="Confirm Password" 
+                                            
+                                            autoComplete="off" />
+                                            {this.state.isPwdSame ? <small>password matched</small>:<small>confirm password should be same as password</small>}
                                         </div>
-                                        <button className="SignUp__next" onClick={this.handleClickNext}> Next</button>
+                                        <button className="SignUp__next" 
+                                       // onClick={this.handleClickNext}
+                                        type='submit'
+                                        > submit</button>
                                     </form>
                                 </div>
                                 <div className="SignUp__some"> Can Also sign in through</div>
                                 {/* <div className="alternative">Can Also sign in through</div> */}
                                 <div className="SignUp__buttons d-flex justify-content-around">
-                                    <button className="SignUp__google" ><img src={google}></img></button>
-                                    <button className="SignUp__facebook"><img src={facebook}></img></button>
+                                    <button type='button' className="SignUp__google" ><img src={google}></img></button>
+                                    <button type='button' className="SignUp__facebook"><img src={facebook}></img></button>
                                 </div>
                             </div>
                   

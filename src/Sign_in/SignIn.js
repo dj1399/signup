@@ -12,9 +12,10 @@ export default class SignIn extends React.Component
         super();
         this.state = {
             userEntry : "",
-            password : ""
+            password : "",
+            role:"patient"
         }
-        this.handleSubmit = this.handleSubmit.bind(this);
+     
         this.checkUserEntry = this.checkUserEntry.bind(this);
     }
 
@@ -42,24 +43,31 @@ export default class SignIn extends React.Component
         }
     }
 
-    handleSubmit(){
-        //e.preventDefault();
+    handleSubmit = (e)=>{
+        e.preventDefault();   
         let status = this.checkUserEntry(this.state.userEntry);
         if (status === "email" || status === "mob") {
-            const data = new FormData();
+            console.log("trigersedddddddddd")
+            var data = {};
             if (status === "email") {
-                data.append("email", this.state.userEntry);
+                // data.append("email", this.state.userEntry);
+                data['email'] = this.state.userEntry;
             }
             else {
-                data.append("contact", this.state.userEntry);
+               // data.append("contact", this.state.userEntry);
+                data['contact'] = this.state.userEntry;
             }
-            data.append("password", this.state.password);
+            //data.append("password", this.state.password);
+                data['password'] = this.state.password;
+                data['role'] = this.state.role;
             console.log(data);
+
             checkLogin(data)
             .then((response)=>{
                 console.log(response)
                 if (response.data.status === "success") {
-                    alert("Success " + response.data.message);
+                    alert("logged in");
+                    console.log(response.data)
                 }
             })
             .catch((error)=>console.log(error));
@@ -95,7 +103,7 @@ export default class SignIn extends React.Component
                             </div>
                             <div className="SignIn__section col-md-5 ">
                                 <div className="SignIn_Form row">
-                                    <form>
+                                    <form onSubmit={this.handleSubmit}>
                                         <div class="form-group">
                                             <input 
                                             type="text" 
@@ -105,6 +113,7 @@ export default class SignIn extends React.Component
                                             placeholder="Email/Phone number" 
                                             aria-describedby="emailHelp"
                                             onChange={this.handleUserEntry}
+                                            required
                                             />
                                         </div>
                                         <div class="form-group">
@@ -115,12 +124,14 @@ export default class SignIn extends React.Component
                                             class="SignIn__pass form-control" 
                                             placeholder="Password" 
                                             onChange={this.handlePassword}
+                                            autoComplete="off"
+                                            required
                                             />
                                         </div>
                                         <button 
                                         type="submit" 
                                         className="SignIn__button"
-                                        onClick={this.handleSubmit}
+                                        
                                         >Sign In</button>
                                     </form>
                                 </div>
