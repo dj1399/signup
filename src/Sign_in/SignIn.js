@@ -77,6 +77,7 @@ export default class SignIn extends React.Component
                     <div className="SignIn__back">
                         <div className="row ">
                             <div className="SignIn__section col-md-7">
+                            <div className="SignIn__left">
                                 <div className="SignIn__text">
                                     Sign In to <br /> View Your Profile Direct
                         </div>
@@ -90,6 +91,7 @@ export default class SignIn extends React.Component
                                     <img src={pic} className="SignIn__picture"></img>
                                 </div>
                                 {/* </div> */}
+                                </div>
                             </div>
                             <div className="SignIn__section col-md-5 ">
                                 <div className="SignIn_Form row">
@@ -130,9 +132,9 @@ export default class SignIn extends React.Component
                                 </div>
                             </div>
                         </div>
-                        {/* </div> */}
+                        </div> 
                         </div>
-                        </div>
+                        
       
             </>
         )
