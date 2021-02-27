@@ -82,43 +82,27 @@ export default class SignUp extends React.Component{
                     </div>
                     </div>
                     <div className="SignUp__section col-md-5 ">
-                    <div className="SignUp_Form row">
-                    <form>
-                    <div class="form-group">
-                  <input type="text" className="SignUp__nam form-control"  placeholder="First Name"/>
-                  </div>
-                  <div class="form-group">
-                  <input type="email" className="SignUp__em form-control"  placeholder="Email/Phone number" aria-describedby="emailHelp"/>
-                  </div>
-                  <div class="form-group">
-                   <input type="password" class="SignUp__pass form-control" placeholder="Enter Password" id="exampleInputPassword1"/>
-                  </div>
-                  <div class="form-group">
-                   <input type="password" class="SignUp__pass form-control" placeholder="Confirm Password" id="exampleInputPassword1"/>
-                  </div>
-                  <div className="row">
-                
-                  <div class="col ">
-                   <button type="button" className="SignUp__gender"  onClick={this.changeColor1} style={{background:this.state.bgColor1,color:this.state.color1}}>Male</button>
-                   </div>
-                   
-                   <div class="col ">
-                   <button type="button" className="SignUp__gender"  onClick={this.changeColor2} style={{backgroundColor:this.state.bgColor2,color:this.state.color2}}>Female</button>
-                  </div>
-                  </div>
-                  
-                  <button className="SignUp__next" onClick={this.handleClickNext}> Next</button>
-                  
-                  
-                  </form>
-                  </div> 
-                  <div className="SignUp__some"> Can Also sign in through</div>
-                  {/* <div className="alternative">Can Also sign in through</div> */}
-                  <div className="SignUp__buttons d-flex justify-content-around">
-                  <button className="SignUp__google" ><img src={google}></img></button>
-                  <button className="SignUp__facebook"><img src={facebook}></img></button>
-                  </div>
-                  </div>
+                                <div className="SignUp_Form row">
+                                    <form>
+                                        <div class="form-group">
+                                            <input type="email" name="" id="" className="SignUp__em form-control" placeholder="Email/Phone number" aria-describedby="emailHelp" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" name="" id="" class="SignUp__pass form-control" placeholder="Enter Password" id="exampleInputPassword1" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" name="" id="" class="SignUp__pass form-control" placeholder="Confirm Password" id="exampleInputPassword1" />
+                                        </div>
+                                        <button className="SignUp__next" onClick={this.handleClickNext}> Next</button>
+                                    </form>
+                                </div>
+                                <div className="SignUp__some"> Can Also sign in through</div>
+                                {/* <div className="alternative">Can Also sign in through</div> */}
+                                <div className="SignUp__buttons d-flex justify-content-around">
+                                    <button className="SignUp__google" ><img src={google}></img></button>
+                                    <button className="SignUp__facebook"><img src={facebook}></img></button>
+                                </div>
+                            </div>
                   
                 {/* </div> */}
             </div>
@@ -207,7 +191,7 @@ export default class SignUp extends React.Component{
                         </div>
                         </div>
                         <div className="col-md-4">
-                        <img src={pic} className=" SignUp__picture"></img>
+                        <img src={pic} alt="pic" className=" SignUp__picture"></img>
                         </div>
                     </div>
                     </div>
